@@ -1,0 +1,38 @@
+[package]
+name = "myutils"
+edition = "2021"
+version.workspace = true
+authors.workspace = true
+
+[workspace.package]
+version = "0.1.0"
+authors = ["Satsuki Akiba <anosatsuk124@gmail.com>"]
+
+[workspace]
+members = [
+    "./",
+    "./crates/template"
+]
+
+[features]
+default = []
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+
+[profile.release]
+lto = true
+
+[workspace.dependencies]
+log = "0.4.20"
+anyhow = "1.0.75"
+educe = "0.4.23"
+once_cell = "1.18.0"
+thiserror = "1.0.49"
+
+[dependencies]
+log.workspace = true
+anyhow.workspace = true
+educe.workspace = true
+once_cell.workspace = true
+thiserror.workspace = true
