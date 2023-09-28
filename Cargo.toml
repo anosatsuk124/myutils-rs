@@ -11,7 +11,8 @@ authors = ["Satsuki Akiba <anosatsuk124@gmail.com>"]
 [workspace]
 members = [
     "./",
-    "./crates/template"
+    "./crates/template",
+    "./crates/mirror-tcp",
 ]
 
 [features]
@@ -29,6 +30,7 @@ anyhow = "1.0.75"
 educe = "0.4.23"
 once_cell = "1.18.0"
 thiserror = "1.0.49"
+clap = { version = "4.4.5", features = ["derive"] }
 
 [dependencies]
 log.workspace = true
@@ -36,3 +38,4 @@ anyhow.workspace = true
 educe.workspace = true
 once_cell.workspace = true
 thiserror.workspace = true
+clap.workspace = true
